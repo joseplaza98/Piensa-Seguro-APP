@@ -1,17 +1,129 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
+
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
     <ion-title>Home</ion-title>
+
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content padding="true" class="has-header">
+
+  <!--Creacion del menú-->
+
+  <ion-menu [content]="NAV">
+    <ion-content>
+      <img src="../assets/img/hGhxr60THCg5aUUIo4dz_Logo2 - copia.jpg" alt="">
+      <ion-list>
+        <!--
+        <button ion-item *ngFor="let page of pages" (click)="goToPage(page.component)" menu-close>
+          <ion-icon item-left name="{{page.icon-end}"></ion-icon>
+          {{page.titulo}}
+        </button>
+        -->
+
+        <button ion-item (click)="mInicio()">
+          <ion-icon item-left name="home"></ion-icon>
+          Inicio
+        </button>
+
+        <button ion-item (click)="mIntroduccion()">
+          <ion-icon item-left name="md-book"></ion-icon>
+          Introducción
+        </button>
+
+        <button ion-item (click)="mProposito()">
+          <ion-icon item-left name="md-trophy"></ion-icon>
+          Proposito
+        </button>
+
+        <button ion-item (click)="mContenido()">
+          <ion-icon item-left name="md-bookmarks"></ion-icon>
+          Contenido
+        </button>
+
+
+        <button ion-item (click)="mAcercaDe()">
+          <ion-icon item-left name="md-add-circle"></ion-icon>
+          Acerca de
+        </button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-nav #NAV [root]="rootPage"></ion-nav>
+
+  <!--Hasta aquí va la Creacion del menú-->
+
+
+
+
+
+  <!-- card de bienvenida del proyecto-->
+
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title style="color:#000000;text-align:center;">
+        Bienvenido
+      </ion-card-title>
+
+      <p style="text-align:center">
+        Este es el inmenso mundo de la seguridad informatica, donde te enseñaremos de una forma objetiva sobre esta temática y fortalecer
+        tus conocimientos en pro de la sociedad actual.
+      </p>
+      <div>
+        <img src="assets/img/TDh2aNEQLe1ZGdaxGZnQ_Logo5.PNG" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <!-- Hasta aquí la card de bienvenida del proyecto-->
+
+
+  <!-- llenado de slider dinámico con ngFor, 
+      llena el contenido en Home.ts , le da formato en home.scss 
+      y lo aplica en home.html-->
+
+  <ion-slides pager>
+    <ion-slide *ngFor="let slide of slides">
+
+      <img [src]="slide.image" class="slide-image" />
+      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+      <p [innerHTML]="slide.description"></p>
+      <p [innerHTML]="slide.observacion"></p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/listo.jpg" class="slide-image" />
+      <h2 class="slide-title">¿Listo para empezar?</h2>
+      <button ion-button large clear icon-end color="primary" (click)="otraPagina()">
+        Continuar
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide>
+  </ion-slides>
+
+  <!-- Hasta aquí card contenedora de slider para introductorio de la app-->
+
+  <!-- Card de inspiración -->
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title style="color:#000000;text-align:center;">
+        Inspiración
+      </ion-card-title>
+
+      <p style="text-align:center">
+        "Los verdaderos hackers siguen un cierto conjunto de reglas éticas, que les impiden lucrarse o causar daño en sus actividades".Kevin
+        Mitnick
+      </p>
+
+      <img src="assets/img/KevinMintnic.jpg" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+
+    </ion-card-content>
+  </ion-card>
+  <!-- Hasta aquíCard de inspiración -->
+
 </ion-content>

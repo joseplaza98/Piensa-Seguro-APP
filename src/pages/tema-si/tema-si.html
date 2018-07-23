@@ -1,0 +1,214 @@
+<!--
+  Generated template for the TemaSiPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>temaSI</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <!-- card contenedora de slider para introductorio de la pagina-->
+  <ion-slides pager>
+
+    <!-- llenado de slider dinámico con ngFor, 
+      llena el contenido en Home.ts , le da formato en home.scss 
+      y lo aplica en home.html-->
+
+    <ion-slide *ngFor="let slide of slides">
+
+      <img [src]="slide.image" class="slide-image" />
+    </ion-slide>
+  </ion-slides>
+
+  <!-- card introduccion, redirecciona a otra pagina 
+    donde esta el resto del contenido introductorio 
+    al presionar el botón-->
+
+  <ion-card>
+    <ion-card-content>
+
+      <img src="assets/img/ArK46MMITXiu0qenY2dZ_maxresdefault.jpg" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+      <ion-card-title style="color:#000000;text-align:center;">
+        Seguridad Informática
+      </ion-card-title>
+
+      <p style="text-align:center">
+        Propósito de la temática:
+      </p>
+
+    <br/>
+
+      <p style="text-align:justify">
+        ​* Generar en el estudiante conocimientos sobre la seguridad informática, teniendo en cuenta de donde se deriva y su importancia
+        en la sociedad.
+      </p>
+
+      <br/>
+
+      <p style="text-align:justify">
+        ​* Garantizar una optima comprensión sobre la temática al igual que de manera dinámica consolidar el conocimiento respecto
+        a la seguridad informática y de la información en la sociedad.
+      </p>
+
+      <br/>
+
+      <!-- Boton que redirecciona a 
+              otra pagina de introducccion 
+              perteneciente a la card de introduccion-->
+      <div class="trans">
+        <ion-buttons>
+          <button ion-button icon-only >
+            Tomar Lección
+            <ion-icon name="ios-more-outline"></ion-icon>
+          </button>
+        </ion-buttons>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+
+  <!-- card Propósito, redirecciona a otra pagina 
+    donde esta el resto del contenido de Propósito
+    al presionar el botón-->
+
+  <ion-card>
+    <ion-card-content>
+
+      <img src="assets/img/8EOc8b3BS606DZyYWcsA_seguridad-informatica1.jpg" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+      <ion-card-title style="color:#000000;text-align:center;">
+        Elementos vulnerables en un sistema informático
+      </ion-card-title>
+
+      <p style="text-align:center">
+        Propósito de la temática:
+      </p>
+
+      <br/>
+
+      <p style="text-align:justify">
+        ​* Identificar los elementos vulnerables en un sistema informático tanto de manera Hardware como Software con sus respectivos
+        métodos de protección.
+      </p>
+
+      <br/>
+
+      <p style="text-align:justify">
+        ​ * Generar conocimiento importante para el momento de manipular sistemas informáticos Hardware y Software.
+      </p>
+
+      <br/>
+
+      <!-- Boton que redirecciona a 
+                  otra pagina de Propósito 
+                  perteneciente a la card de Propósito-->
+      <div class="trans">
+        <ion-buttons>
+          <button ion-button icon-only >
+            Tomar lección
+            <ion-icon name="ios-more-outline"></ion-icon>
+          </button>
+        </ion-buttons>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+
+  <!-- card Contenido, redirecciona a otra pagina 
+    donde esta el resto del contenido 
+    al presionar el botón-->
+
+  <ion-card>
+    <ion-card-content>
+
+      <img src="assets/img/KNzyUY9RDW7cA6Oq4f5j_Seguridadfisica2.jpg" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+      <ion-card-title style="color:#000000;text-align:center;">
+        Seguridad Física
+      </ion-card-title>
+
+      <p style="text-align:center">
+        Propósito de la temática:
+      </p>
+
+      <br/>
+
+      <p style="text-align:justify">
+        ​* Brindar a los estudiantes una vista general sobre los sistemas físicos y su debida calidad de seguridad dentro de la sociedad
+        actual.
+      </p>
+
+      <br/>
+
+      <p style="text-align:justify">
+        *​ Conglomerar los sistemas de seguridad física de modo que el estudiante las identifique y comprenda su funcionamiento.
+      </p>
+
+      <br/>
+
+      <!-- Boton que redirecciona a 
+                  otra pagina de Contenido 
+                  perteneciente a la card de Contenido-->
+      <div class="trans">
+        <ion-buttons>
+          <button ion-button icon-only >
+            Tomar Lección
+            <ion-icon name="ios-more-outline"></ion-icon>
+          </button>
+        </ion-buttons>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+
+  <!-- card Acerca de, redirecciona a otra pagina 
+    donde esta el resto del contenido 
+    al presionar el botón-->
+
+  <ion-card>
+    <ion-card-content>
+
+      <img src="assets/img/JNCgejmTRr6kUw6ps0FB_nmap.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+      <ion-card-title style="color:#000000;text-align:center;">
+        Manejo del comando NMAP
+      </ion-card-title>
+
+      <p style="text-align:center">
+        Propósito de la temática
+      </p>
+
+      <br/>
+
+      <p style="text-align:justify">
+        ​ Comprender el uso del comando NMAP para realizar escaneos dirigidos en un ambiente controlado.
+      </p>
+
+      <br/>
+
+      <p style="text-align:justify">
+        ​ Manejo de la metodología para así de este modo manipular maquinas y explotar vulnerabilidades.
+      </p>
+
+      <br/>
+
+      <!-- Boton que redirecciona a 
+                  otra pagina de Contenido 
+                  perteneciente a la card de Contenido-->
+      <div class="trans">
+        <ion-buttons>
+          <button ion-button icon-only >
+            Tomar Lección
+            <ion-icon name="ios-more-outline"></ion-icon>
+          </button>
+        </ion-buttons>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,97 @@
+<!--
+  Generated template for the TalleresCifradoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>talleresCifrado</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <!-- card contenedora de slider para introductorio de la pagina-->
+  <ion-slides pager>
+
+    <!-- llenado de slider dinámico con ngFor, 
+      llena el contenido en Home.ts , le da formato en home.scss 
+      y lo aplica en home.html-->
+
+    <ion-slide *ngFor="let slide of slides">
+
+      <img [src]="slide.image" class="slide-image" />
+    </ion-slide>
+  </ion-slides>
+
+  <!-- card introduccion, redirecciona a otra pagina 
+    donde esta el resto del contenido introductorio 
+    al presionar el botón-->
+
+  <ion-card>
+    <ion-card-content>
+
+      <img src="assets/img/N7pksb90RGq4YBTaVd2O_Criptograma.jpg" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+      <ion-card-title style="color:#000000;text-align:center;">
+        Taller #1: Criptograma
+      </ion-card-title>
+
+      <p style="text-align:justify">
+        ​* Realiza el taller práctico y emplea tus conocimientos respecto al la creación de criptogramas.
+      </p>
+
+      <br/>
+
+      <!-- Boton que redirecciona a 
+              otra pagina de introducccion 
+              perteneciente a la card de introduccion-->
+      <div class="trans">
+        <ion-buttons>
+          <button ion-button icon-only>
+            Realizar Taller
+            <ion-icon name="ios-more-outline"></ion-icon>
+          </button>
+        </ion-buttons>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+
+  <!-- card Propósito, redirecciona a otra pagina 
+    donde esta el resto del contenido de Propósito
+    al presionar el botón-->
+
+  <ion-card>
+    <ion-card-content>
+
+      <img src="assets/img/SsrSzdESUC0zU5vHV4AV_puerto.jpg" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+      <ion-card-title style="color:#000000;text-align:center;">
+        Taller #2: Vulnerar por el puerto 6667
+      </ion-card-title>
+
+      <p style="text-align:justify">
+        * Realiza el taller práctico y emplea tus conocimientos respecto al manejo de comandos que te permitan vulnerar la seguridad
+        de un sistema informatico por un puerto determinado.
+      </p>
+
+      <br/>
+
+      <!-- Boton que redirecciona a 
+                  otra pagina de Propósito 
+                  perteneciente a la card de Propósito-->
+      <div class="trans">
+        <ion-buttons>
+          <button ion-button icon-only>
+            Realizar Práctica
+            <ion-icon name="ios-more-outline"></ion-icon>
+          </button>
+        </ion-buttons>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

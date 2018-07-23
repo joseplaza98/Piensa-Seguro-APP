@@ -1,0 +1,65 @@
+<!--
+  Generated template for the MenuContenidoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>menuContenido</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <!-- card contenedora de slider para introductorio de la pagina-->
+  <ion-slides pager>
+
+      <!-- llenado de slider dinámico con ngFor, 
+        llena el contenido en Home.ts , le da formato en home.scss 
+        y lo aplica en home.html-->
+  
+      <ion-slide *ngFor="let slide of slides">
+  
+        <img [src]="slide.image" class="slide-image" />
+        
+      </ion-slide>
+    </ion-slides>
+    <!-- Hasta aquí card contenedora de slider para introductorio de la pagina-->
+    <h2 class="slide-title">Contenido Aprendizaje</h2>
+    <br/>
+    
+    <!--Lista de temas-->
+    <ion-list>
+        <ion-item>
+            <ion-thumbnail item-start>
+                <img src="assets/img/images.png" class="slide-image" />
+            </ion-thumbnail>
+            <h2>Introducción</h2>
+            <h2>S.I</h2>
+            <button ion-button clear item-end (click)="aContenidoSI()">Ver</button>
+        </ion-item>
+
+        <ion-item>
+            <ion-thumbnail item-start>
+                <img src="assets/img/images25.jpg" class="slide-image" />
+            </ion-thumbnail>
+            <h2>Metetodo</h2>
+            <h2> Cifrado</h2>
+            <button ion-button clear item-end (click)="aContenidoCifrado()">Ver</button>
+          </ion-item>
+
+          <ion-item>
+              <ion-thumbnail item-start>
+                  <img src="assets/img/descarga.jpg" class="slide-image" />
+              </ion-thumbnail>
+              <h2>Certificado</h2>
+              <h2> Digital</h2>
+              <button ion-button clear item-end>Ver</button>
+            </ion-item>
+      </ion-list>
+
+</ion-content>

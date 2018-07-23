@@ -1,0 +1,109 @@
+<!--
+  Generated template for the TemaCifradoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>temaCifrado</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+ <!-- card contenedora de slider para introductorio de la pagina-->
+ <ion-slides pager>
+
+    <!-- llenado de slider dinámico con ngFor, 
+      llena el contenido en Home.ts , le da formato en home.scss 
+      y lo aplica en home.html-->
+
+    <ion-slide *ngFor="let slide of slides">
+
+      <img [src]="slide.image" class="slide-image" />
+    </ion-slide>
+  </ion-slides>
+
+  <!-- card introduccion, redirecciona a otra pagina 
+    donde esta el resto del contenido introductorio 
+    al presionar el botón-->
+
+  <ion-card>
+    <ion-card-content>
+
+      <img src="assets/img/7CDHiRBRdiWeynxekZbg_Cifrado1.jpg" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+      <ion-card-title style="color:#000000;text-align:center;">
+        Métodos de cifrado
+      </ion-card-title>
+
+      <p style="text-align:center">
+        Propósito de la temática:
+      </p>
+
+​ 
+    <br/>
+
+      <p style="text-align:justify">
+        ​* Conocer los Métodos de Encriptación antiguos de la sociedad.
+      </p>
+
+      <br/>
+
+      <!-- Boton que redirecciona a 
+              otra pagina de introducccion 
+              perteneciente a la card de introduccion-->
+      <div class="trans">
+        <ion-buttons>
+          <button ion-button icon-only >
+            Tomar Lección
+            <ion-icon name="ios-more-outline"></ion-icon>
+          </button>
+        </ion-buttons>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+
+  <!-- card Propósito, redirecciona a otra pagina 
+    donde esta el resto del contenido de Propósito
+    al presionar el botón-->
+
+  <ion-card>
+    <ion-card-content>
+
+      <img src="assets/img/8EOc8b3BS606DZyYWcsA_seguridad-informatica1.jpg" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+      <ion-card-title style="color:#000000;text-align:center;">
+        Métodos de cifrado 2
+      </ion-card-title>
+
+      <p style="text-align:center">
+        Propósito de la temática:
+      </p>
+
+      <br/>
+
+      <p style="text-align:justify">
+        ​* ​ Conocer los Métodos de Encriptación antiguos de la sociedad.
+      </p>
+
+      <br/>
+
+      <!-- Boton que redirecciona a 
+                  otra pagina de Propósito 
+                  perteneciente a la card de Propósito-->
+      <div class="trans">
+        <ion-buttons>
+          <button ion-button icon-only >
+            Tomar lección
+            <ion-icon name="ios-more-outline"></ion-icon>
+          </button>
+        </ion-buttons>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
